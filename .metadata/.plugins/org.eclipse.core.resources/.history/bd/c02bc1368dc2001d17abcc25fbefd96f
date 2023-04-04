@@ -1,0 +1,21 @@
+package com.springboot.serviceimpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.springboot.dao.DoctorsRepository;
+import com.springboot.entity.Doctors;
+import com.springboot.service.DoctorService;
+
+@Service
+public class DoctorsServiceImpl implements DoctorService {
+	@Autowired
+	private DoctorsRepository doctorsRepository;
+
+	@Override
+	public Iterable<Doctors> showAllPatients() {
+		// TODO Auto-generated method stub
+		return doctorsRepository.findAll();
+	}
+
+}

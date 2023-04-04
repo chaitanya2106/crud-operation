@@ -1,0 +1,9 @@
+package com.springboot.service;
+
+import com.springboot.entity.Doctors;
+
+public interface DoctorService {
+	public Iterable<Doctors> showAllPatients();
+	
+
+}
